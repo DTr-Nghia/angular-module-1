@@ -78,7 +78,7 @@ interface Data {
 }
 const getData = async () => {
   try {
-    const res = await fetch("http://127.0.0.1:5500/db.json");
+    const res = await fetch("http://127.0.0.1:5500/database.json");
     const data = await res.json();
     console.log("Bài 7:");
     console.log(data);
@@ -102,11 +102,11 @@ interface Product {
   quantity: number;
 }
 const productsList: Product[] = [
-  { id: 1, name: "Product A", price: 40, quantity: 2 },
-  { id: 2, name: "Product B", price: 90, quantity: 3 },
-  { id: 3, name: "Product C", price: 504, quantity: 1 },
-  { id: 4, name: "Product D", price: 2400, quantity: 2 },
-  { id: 5, name: "Product E", price: 900, quantity: 4 },
+  { id: 1, name: "Product 1", quantity: 2, price: 40 },
+  { id: 2, name: "Product 2", quantity: 3, price: 90 },
+  { id: 3, name: "Product 3", quantity: 6, price: 504 },
+  { id: 4, name: "Product 4", quantity: 2, price: 2400 },
+  { id: 5, name: "Product 5", quantity: 7, price: 900 },
 ];
 console.log("Bài 9:");
 const sumPrice = productsList.reduce((cur, acc) => {
